@@ -24,6 +24,7 @@ cd <your-custom-folder-name>
 * Step 3:
 ```
 mv .env.example .env
+mv config.js.example config.js
 ```
 * Step 4: Change the contents of your .env file
 ```
