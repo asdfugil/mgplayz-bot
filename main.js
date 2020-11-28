@@ -4,14 +4,14 @@ const config = require("./config.js");
 const prefix = config.defaultPrefix;
 const fs = require("fs");
 const Keyv = require("keyv");
-class MGBotClient extends Discord.Client {
+class BotClient extends Discord.Client {
   constructor(clientOptions) {
     super(clientOptions);
     this.commands = new Discord.Collection();
     this.queue = new Discord.Collection();
   }
 }
-const client = new MGBotClient({
+const client = new BotClient({
   ws: { intents: 32767 },
   partials: ["USER", "CHANNEL", "REACTION", "MESSAGE"],
   http: {
@@ -128,8 +128,7 @@ client.on("messageUpdate", async message => {
 /*
 client.on("error", (error, message) => {
   console.error(error);
-  client.channels.get("707871844577050634").send(`⚠ The bot received an error.\nOrigin: ${message.guild.name}\n\`\`\`${error.stack}\`\`\``);
-});
+);
 */
 client.on("message", async message => {
   let actualPrefix = prefix;
@@ -171,12 +170,6 @@ client.on("message", async message => {
 
 
   if (!command) return;
-
-  if (command.disableable) {
-    disabled = await disabledCommands.get(message.guild.id);
-  }
-
-  if (disabled && disabled.includes(command.name)) return; // Ignores disabled commands
 
   console.log(`${message.author.username} executed ${commandName}!
    Arguments: ${args.join(" ")}
@@ -259,24 +252,8 @@ client.on("message", async message => {
 
   try {
     await command.execute(message, args);
-    console.log("Command executed successfully!");
-  } catch (error) {
+   }
     console.error(error);
-    client.channels.cache
-      .get("707871844577050634")
-      .send(
-        `⚠ The bot received an error.\nOrigin: ${message.guild.name}\n\`\`\`${error.stack}\`\`\``
-      );
-    if (!error.code)
-      return message.channel.send(
-        `<:Error:665142091906809877> **Oops, an error occured while trying to execute that operation.**`
-      );
-    else
-      return message.channel.send(
-        `<:Error:665142091906809877> **Oops, an error occured while trying to execute that operation.**\```\n${clean(
-          error
-        )}\n\````
-      );
   }
 });
 client.login(process.env.BOT_TOKEN);
