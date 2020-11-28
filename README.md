@@ -8,12 +8,12 @@
 ## Hosting
 (read the LICENSE file before proceeding)
 * Requirements:
-  * Node v12 (required for voice support)
+  * Node v12 and above (required for voice support)
   * pnpm version 5 (most-efficient) [or npm version 7 if you want]
   * git
   * nano
-  * Atleast 50MB of free RAM
-  * Atleast 50MB of free disk space
+  * Atleast 63MB of free RAM
+  * Atleast 424MB of free disk space
   
 * Step 1: Clone the repository
 ```
