@@ -2,7 +2,6 @@ require("dotenv").config();
 const Discord = require("discord.js");
 const config = require("./config.js");
 const prefix = config.defaultPrefix;
-//const db = require("quick.db");
 const fs = require("fs");
 const Keyv = require("keyv");
 class MGBotClient extends Discord.Client {
@@ -64,37 +63,12 @@ client.once("ready", async () => {
   mutedutil.autoReMute(client);
   mutedutil.autoUpdateDataBase(client);
 });
-/*
-const activities = [
-  { "type": "PLAYING", "status": "Weeb Repellent" },
-  { "type": "WATCHING", "status": "Fortgay Players" },
-  { "type": "WATCHING", "status": "ToS and Rule Breakers" },
-  { "type": "PLAYING", "status": `Send ${prefix}help to get started!` },
-  { "type": "PLAYING", "status": "Minecraft with RTX" },
-  { "type": "WATCHING", "status": "MrBeast's Videos" },
-  { "type": "WATCHING" , "status": "PewDiePie" },
-  { "type": "PLAYING", "status": "Do not go to anime subreddits" },
-  { "type": "PLAYING", "status": "DO NOT GO TO r/worldpolitics" },
-  { "type": "WATCHING", "status": "YouTube" },
-  { "type": "PLAYING", "status": "Type :avatar Ismashedmyipad to get started!" },
-  { "type": "PLAYING", "status": "Uninstalling TikTok" },
-  { "type": "PLAYING", "status": "Sueing Cringy Weebs" },
-  { "type": "LISTENING", "status": "Gonna Give You Up" }
-];
-async function changeActivity() {
-  let activity = activities[Math.floor(Math.random() * activities.length)];
-  await client.user
-    .setActivity(activity.status, { type: activity.type })
-    .catch(() => {});
-}
-*/
 client.on("ready", async () => {
   check(client);
   await client.user.setActivity(`Send ${prefix}help for a list of commands!`, {
     type: "PLAYING"
   });
   client.user.setStatus("online");
-  //setInterval(changeActivity, 21e3);
 });
 client.on("shardReady", shard => {
   console.log(`Shard ${shard} ready!`);
