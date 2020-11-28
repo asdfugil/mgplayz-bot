@@ -23,7 +23,7 @@
       "discord_user_id": "570634232465063967"
     }
   ],
-  "license": "MIT",
+  "license": "AGPL-3.0-or-later",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "@keyv/sqlite": "^2.0.2",
