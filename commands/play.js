@@ -9,9 +9,7 @@ const ytdl = require("ytdl-core");
 const { MessageEmbed } = Discord;
 const ytsr = require("ytsr");
 const ytpl = require("ytpl");
-const COOKIE =
-  "VISITOR_INFO1_LIVE=Y0y_YUX4-dY; CONSENT=YES+PH.en+20171211-00-1; _gcl_au=1.1.1057109527.1604116769; HSID=Au6ppKe-VKNNdwjxv; SSID=A31-qY8reZVXiwO-w; APISID=H3IJvXvc-ee8-EJQ/A8ayQg9lAhsldDF19; SAPISID=_6tKlY8mYXrjbF_L/ASQDY8eWyyN8XCRzr; __Secure-3PAPISID=_6tKlY8mYXrjbF_L/ASQDY8eWyyN8XCRzr; __Secure-3PSID=3QeGSdm8jmnssqGNfQvNEguFCjlwXOTfpe0AtHGT-pXgdDLrd8u-uAAcCzwOMt27OV5dSw.; SID=3QeGSdm8jmnssqGNfQvNEguFCjlwXOTfpe0AtHGT-pXgdDLrAKsg-tFf9esTmG4HsEJL6w.; PREF=f6=400&volume=100&al=en&cvdm=grid&f5=30000; LOGIN_INFO=AFmmF2swRAIgHhosJ9OF8h7qwqjtcWuxQECKetav8mPDT-7kDMEKkS4CIBZ81l46QPD6eAFhyW_wXu-uDKMXlrcjIdM1KacocKXN:QUQ3MjNmd09MSVJUNUE4M19vVXFkSDVWWHM2c1I5bmdBeU1xODV0RjNNWnVzT0VqcTFWMnhKbU0yQVhpd1Z4WXBwS216VzZOUW1ncmZabWVDX3gzMUVxd01HLUhfYVVtQlZhOUtIYldhSGV5RmhrTXQ1SXZ1VHQtUDVjd2tlWnNoTzJvQ3hrOTJuUGdLQXVoOXRiOXNrYTl2TWNXQjJTSFNDRy1NUkI3enhYX3JxYVEzMGRMTFpZ; YSC=Z1hog6t1NmE; SIDCC=AJi4QfGLmCTpamAN5_yPWDIL0G2wwCfLy25L9Hw5gtwLOZiNKr-u7Wr9YNHljhZ6St_Nm1F02g; __Secure-3PSIDCC=AJi4QfHCd2LCBHbI7kAYG3F5z7HhktVgAJG1LagTL2s49yQZ_w-2E7Z0CrRv0pciVPMSdj1fLQ";
-
+const COOKIE = "your-cookie-here"
 module.exports = {
   name: "play",
   description:
@@ -198,10 +196,6 @@ module.exports = {
 
     let mainStream = await ytdl(song.url, {
       filter: "audio",
-      highWaterMark: 1 << 15,
-      opusEncoded: true,
-      dlChunkSize: 0,
-      volume: false,
       requestOptions: { headers: { cookie: COOKIE }, maxRedirects: 4 },
       bitrate: "auto"
     });
