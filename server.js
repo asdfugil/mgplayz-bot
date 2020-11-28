@@ -15,11 +15,6 @@ const dreams = [
   "Wash the dishes"
 ];
 
-process.on("SIGTERM", async () => {
-  if (process.env.PROJECT_DOMAIN)
-    await fetch("http://localhost:1083/refresh", { method: "POST" }); // make it restart instead of shutdown
-  process.exit(1);
-});
 
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
