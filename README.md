@@ -37,15 +37,15 @@ BOT_TOKEN=<put your bot token here>
 nano .env
 ```
 * Step 6: Start the installation process
-* pnpm:
-```
-pnpm install package.json
-```
+   - pnpm:
+   ```
+   pnpm install package.json
+   ```
+   - npm:
+   ```
+   npm install package.json
+   ```
 
-* npm:
-```
-npm install package.json
-```
 * Step 7: Start the bot
 ```
 node index.js
