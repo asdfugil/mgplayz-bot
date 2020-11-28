@@ -1,6 +1,6 @@
 ## MGPlayz' Bot
 * A discord.js bot made by MGPlayzYT. Features a meme command, voice commands, and more!
-* AGPL 3 License
+* [AGPL 3 License](https://raw.githubusercontent.com/MGPlayzYT/mgplayz-bot/main/LICENSE)
 
 ## Releases
 * (Current) v1.0.0
