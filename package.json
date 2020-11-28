@@ -1,0 +1,61 @@
+{
+  "name": "mgplayz-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "node index.js --max_old_space_size=512",
+    "start": "node server.js --max_old_space_size=512"
+  },
+  "repository": {},
+  "keywords": [
+    "discord-bot",
+    "discord",
+    "mgplayz",
+    "discord.js"
+  ],
+  "author": {
+    "name": "MGPlayzYT#4565",
+    "discord_user_id": "488692154164576256"
+  },
+  "co-owner": [
+    {
+      "name": "Nick Chan#0001",
+      "discord_user_id": "570634232465063967"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "@keyv/sqlite": "^2.0.2",
+    "bufferutil": "^4.0.2",
+    "canvas": "^2.6.1",
+    "custom-translate": "^2.2.8",
+    "discord.js": "^12.5.0",
+    "dotenv": "^8.2.0",
+    "erlpack": "git://github.com/discord/erlpack.git",
+    "express": "^4.17.1",
+    "ffmpeg-static": "^4.2.7",
+    "gifencoder": "^2.0.1",
+    "got": "^11.7.0",
+    "keyv": "^4.0.3",
+    "libsodium-wrappers": "^0.7.8",
+    "mathjs": "^8.0.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "node-fetch": "^2.6.1",
+    "npm": "^7.0.14",
+    "parse-duration": "^0.4.3",
+    "querystring": "^0.2.0",
+    "serialize-javascript": "^5.0.1",
+    "utf-8-validate": "^5.0.2",
+    "vm2": "^3.9.2",
+    "ytdl-core": "^4.1.0",
+    "ytpl": "git://github.com/TimeForANinja/node-ytpl.git#wip-api-adjustments",
+    "ytsr": "git://github.com/TimeForANinja/node-ytsr.git#wip-api-adjustments",
+    "zlib-sync": "^0.1.7"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "enginesStrict": true
+}
