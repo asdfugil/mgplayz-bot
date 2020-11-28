@@ -12,7 +12,7 @@
   * pnpm version 5 (most-efficient) [or npm version 7 if you want]
   * git
   * nano
-  * Atleast 63MB of free RAM
+  * Atleast 63MB of free memory
   * Atleast 424MB of free disk space
   
 * Step 1: Clone the repository
