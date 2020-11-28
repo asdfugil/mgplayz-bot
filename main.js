@@ -252,7 +252,7 @@ client.on("message", async message => {
 
   try {
     await command.execute(message, args);
-   }
+   } catch (error)
     console.error(error);
   }
 });
