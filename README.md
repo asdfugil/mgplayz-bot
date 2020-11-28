@@ -4,7 +4,7 @@ A discord.js bot made by MGPlayzYT. Features a meme command, voice commands, and
 ## Releases
 * (Current) v1.0.0
 
-### Hosting
+## Hosting
 (read the LICENSE file before proceeding)
 * Requirements:
   * Node v12 (required for voice support)
