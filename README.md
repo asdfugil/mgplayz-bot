@@ -39,6 +39,6 @@ pnpm install package.json
 ```
 * Step 7: Start the bot
 ```
-node server.js
+node index.js
 ```
 and you're done!
