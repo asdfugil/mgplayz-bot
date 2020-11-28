@@ -1,5 +1,5 @@
 ## MGPlayz' Bot
-A discord.js bot made by MGPlayzYT.
+A discord.js bot made by MGPlayzYT. Features a meme command, voice commands, and more!
 
 ## Releases
 * (Current) v1.0.0
@@ -13,3 +13,32 @@ A discord.js bot made by MGPlayzYT.
   * nano
   * Atleast 500MB of Memory
   * Atleast 50MB of free disk space
+* Step 1: Clone the repository
+```
+git clone https://github.com/MGPlayzYT/mgplayz-bot <custom folder name>
+```
+* Step 2: 
+```
+cd <your-custom-folder-name>
+```
+* Step 3:
+```
+mv .env.example .env
+```
+* Step 4: Change the contents of your .env file
+```
+BOT_TOKEN=<put your bot token here>
+```
+* Step 5: 
+```
+nano .env
+```
+* Step 6: Start the installation process
+```
+pnpm install package.json
+```
+* Step 7: Start the bot
+```
+node server.js
+```
+and you're done!
