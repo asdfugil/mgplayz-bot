@@ -1,6 +1,6 @@
 ## MGPlayz' Bot
-A discord.js bot made by MGPlayzYT. Features a meme command, voice commands, and more!
-AGPL 3 License
+* A discord.js bot made by MGPlayzYT. Features a meme command, voice commands, and more!
+* AGPL 3 License
 
 ## Releases
 * (Current) v1.0.0
@@ -9,11 +9,12 @@ AGPL 3 License
 (read the LICENSE file before proceeding)
 * Requirements:
   * Node v12 (required for voice support)
-  * pnpm version 5 (most-efficient)
+  * pnpm version 5 (most-efficient) [or npm version 7 if you want]
   * git
   * nano
-  * Atleast 500MB of Memory
+  * Atleast 50MB of free RAM
   * Atleast 50MB of free disk space
+  
 * Step 1: Clone the repository
 ```
 git clone https://github.com/MGPlayzYT/mgplayz-bot <custom folder name>
